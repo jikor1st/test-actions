@@ -20,10 +20,9 @@ const run = async () => {
 
     await driver.get(url);
     console.log("driver: ", driver);
+    await driver.quit();
   } catch (error) {
     console.log("error: ", error);
-  } finally {
-    await driver.quit();
   }
 };
 
