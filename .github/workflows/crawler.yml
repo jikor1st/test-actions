@@ -19,10 +19,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    # strategy:
-    # matrix:
-    # node-version: [14.x]
-    # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    strategy:
+      matrix:
+        node-version: [22.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
       - name: Setup Chrome
@@ -30,12 +30,12 @@ jobs:
         with:
           chrome-version: "stable"
           install-chromedriver: true
-      # - uses: actions/checkout@v2
-      # - name: Use Node.js ${{ matrix.node-version }}
-      #   uses: actions/setup-node@v2
-      #   with:
-      #     node-version: ${{ matrix.node-version }}
-      #     cache: "npm"
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
 
       - run: npm install
       - run: npm run start
