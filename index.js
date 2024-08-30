@@ -22,6 +22,8 @@ const run = async () => {
     console.log("driver: ", driver);
   } catch (error) {
     console.log("error: ", error);
+  } finally {
+    await driver.quit();
   }
 };
 
