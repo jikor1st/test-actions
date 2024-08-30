@@ -8,7 +8,7 @@ const run = async () => {
   try {
     const opts = new chrome.Options();
 
-    opts.addArguments("--headless");
+    // opts.addArguments("--headless");
     opts.addArguments("--no-sandbox");
     opts.addArguments("--single-process");
     opts.addArguments("--disable-dev-shm-usage");
