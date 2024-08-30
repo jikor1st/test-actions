@@ -28,7 +28,7 @@ jobs:
       - name: Setup Chrome
         uses: browser-actions/setup-chrome@latest
         with:
-          chrome-version: "113.0.5672.92"
+          chrome-version: "128.0.6613.86"
           # chrome-version: "stable"
           install-chromedriver: true
       - uses: actions/checkout@v2
